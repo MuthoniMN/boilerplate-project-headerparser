@@ -31,7 +31,7 @@ app.get('/api/hello', function (req, res) {
 
 app.get('/api/whoami', function (req, res) {
   let obj = {
-    "ipadress": `::ffff:${req.clientIp}`,
+    "ipadress": req.clientIp,
     "language": req.headers['accept-language'],
     "software": req.headers['user-agent']
   }
